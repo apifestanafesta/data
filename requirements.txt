@@ -2,3 +2,4 @@ ccxt
 flask
 cors
 flask_cors
+gunicorn
