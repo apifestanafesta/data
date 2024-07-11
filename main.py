@@ -1,3 +1,4 @@
+import os
 from flask import Flask, request, jsonify
 import ccxt
 from flask_cors import CORS
@@ -67,4 +68,5 @@ def arbitrage():
     return jsonify(json_data)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(debug=True, port=port)
